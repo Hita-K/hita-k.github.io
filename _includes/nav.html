@@ -1,0 +1,20 @@
+<header class="site-header">
+  <nav class="site-nav">
+    {% for item in site.nav %}
+    <a href="{{ item.url | relative_url }}" class="{% if page.url == item.url %}active{% endif %}">{{ item.title }}</a>
+    {% endfor %}
+    <a href="{{ '/hita-cv.pdf' | relative_url }}">cv</a>
+    <a href="https://github.com/Hita-K/">github</a>
+  </nav>
+
+  <h1 class="site-name">Hita Kambhamettu</h1>
+
+  <div class="profile-links">
+    <code class="email-pill">hitakam [at] engineering.upenn.edu</code>
+    <span class="dot">&middot;</span>
+    <a href="https://scholar.google.com/citations?user=YB4kR8wAAAAJ&hl=en&oi=ao">Google Scholar</a>
+    <span class="dot">&middot;</span>
+    <a href="https://www.linkedin.com/in/hitakam">LinkedIn</a>
+  </div>
+</header>
+<hr class="section-rule">

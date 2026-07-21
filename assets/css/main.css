@@ -1,0 +1,228 @@
+/* ---------------------------------------------------------
+   Design tokens
+--------------------------------------------------------- */
+:root {
+  --color-bg: #fffdfb;
+  --color-text: #2a2a28;
+  --color-text-muted: #726d68;
+  --color-border: #ececea;
+
+  --color-accent: #7c3aed;       /* darker purple -- default link color */
+  --color-accent-hover: #b270ff; /* lighter purple -- link hover state */
+
+  --font-body: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --content-width: 860px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* ---------------------------------------------------------
+   Job market banner (off by default, see _config.yml)
+--------------------------------------------------------- */
+.job-banner {
+  background: var(--color-accent);
+  color: #fff;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.job-banner a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------------------------------------------------------
+   Header / nav
+--------------------------------------------------------- */
+.site-header {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0.75rem 1rem 0;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 0.85rem;
+}
+
+.site-nav a {
+  color: var(--color-accent);
+  font-size: 0.9rem;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--color-text);
+}
+
+.site-name {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.email-pill {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  user-select: all;
+}
+
+.section-rule {
+  max-width: var(--content-width);
+  margin: 1rem auto;
+  border: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.profile-links {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.profile-links a { color: var(--color-accent); }
+.profile-links a:hover { text-decoration: underline; }
+
+.profile-links .dot {
+  color: var(--color-border);
+  margin: 0 0.5rem;
+}
+
+@media (min-width: 700px) {
+  .header-main {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .header-info { flex: 1; padding-top: 0.25rem; }
+}
+
+/* ---------------------------------------------------------
+   Main content
+--------------------------------------------------------- */
+.site-main {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0.75rem 1rem 2rem;
+}
+
+.site-main h2 {
+  font-size: 1.3rem;
+  margin: 1.5rem 0 0.6rem;
+}
+
+.site-main h2:first-child { margin-top: 0; }
+
+.site-main h3.pub-year {
+  font-size: 1.15rem;
+  color: var(--color-text);
+  margin: 1.5rem 0 0.5rem;
+}
+.site-main h3.pub-year:first-of-type { margin-top: 0.25rem; }
+
+.site-main p { margin: 0 0 0.75rem; }
+
+.soft-bold { font-weight: 700; }
+
+.site-main blockquote {
+  margin: 0.85rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 2px solid var(--color-border);
+  background: #faf3fa;
+  color: var(--color-text-muted);
+}
+.site-main blockquote p { margin: 0; }
+
+/* ---------------------------------------------------------
+   Publication list
+--------------------------------------------------------- */
+.pub-list {
+  list-style: disc;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.pub-list li {
+  padding: 0.6rem 0;
+}
+
+.pub-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+.pub-title a { color: var(--color-text); }
+.pub-title a:hover { text-decoration: underline; }
+
+.pub-authors {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+}
+
+.pub-meta {
+  color: var(--color-text-muted);
+  font-style: italic;
+  font-size: 0.88rem;
+}
+
+/* ---------------------------------------------------------
+   Responsive
+--------------------------------------------------------- */
+@media (max-width: 480px) {
+  .site-nav { gap: 1rem 1.25rem; }
+  .avatar { width: 96px; height: 96px; }
+}

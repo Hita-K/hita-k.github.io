@@ -1,0 +1,8 @@
+{% if site.job_market.active %}
+<div class="job-banner">
+  <span>{{ site.job_market.text }}</span>
+  {% if site.job_market.link %}
+  <a href="{{ site.job_market.link | relative_url }}">{{ site.job_market.link_text | default: "Learn more" }} &rarr;</a>
+  {% endif %}
+</div>
+{% endif %}

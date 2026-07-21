@@ -1,0 +1,21 @@
+title: Hita Kambhamettu
+description: "Personal academic website of Hita Kambhamettu"
+url: "https://hita-k.github.io"
+
+# Toggle the job-market banner on/off from one place.
+job_market:
+  active: false
+  text: "I am on the academic and industry job market this year!"
+  link: "/research-statement.html"
+  link_text: "Learn more"
+
+nav:
+  - title: home
+    url: /
+
+exclude:
+  - README.md
+  - changelog.txt
+  - Gemfile
+  - Gemfile.lock
+  - vendor
