@@ -9,10 +9,6 @@ job_market:
   link: "/research-statement.html"
   link_text: "Learn more"
 
-nav:
-  - title: home
-    url: /
-
 exclude:
   - README.md
   - changelog.txt

@@ -9,6 +9,7 @@
 
   --color-accent: #7c3aed;       /* darker purple -- default link color */
   --color-accent-hover: #b270ff; /* lighter purple -- link hover state */
+  --color-purple-gray: #755e90;  /* muted gray/purple blend -- subtle text accent */
 
   --font-body: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
@@ -178,12 +179,15 @@ h1, h2, h3 {
 
 .soft-bold { font-weight: 700; }
 
+.purple-gray { color: var(--color-purple-gray); }
+
 .site-main blockquote {
   margin: 0.85rem 0;
   padding: 0.5rem 1rem;
   border-left: 2px solid var(--color-border);
   background: #faf3fa;
-  color: var(--color-text-muted);
+  color: var(--color-purple-gray);
+  font-weight: 700;
 }
 .site-main blockquote p { margin: 0; }
 
